@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Book Generator</title>
+</head>
+<body>
+
+  <h1>Book Generator</h1>
+
+  <label>Genre:</label><br>
+  <input type="text" id="genre"><br><br>
+
+  <label>Main Character Name:</label><br>
+  <input type="text" id="character"><br><br>
+
+  <label>Your Name (Author):</label><br>
+  <input type="text" id="author"><br><br>
+
+  <button onclick="generateBook()">Generate Book</button>
+
+  <hr>
+
+  <h2>Your Book</h2>
+  <p id="output"></p>
+
+  <script>
+    function generateBook() {
+      let genre = document.getElementById("genre").value;
+      let character = document.getElementById("character").value;
+      let author = document.getElementById("author").value;
+
+      document.getElementById("output").innerHTML =
+        "In the world of " + genre + 
+        ", a mysterious figure named " + character + 
+        " rose against fate. <br><br>" +
+        "Written & Published by: <b>" + author + "</b>";
+    }
+  </script>
+
+</body>
+</html>
